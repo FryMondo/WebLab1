@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BasicHTML</title>
-    <meta name="description" content="Це приклад HTML-сторінки">
-    <meta name="keywords" content="HTML, CSS, веб-розробка">
     <title>BasicHTML</title>
     <style>
         body {
@@ -15,60 +11,79 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-color: black;
+            color: white;
         }
 
         header, footer {
             text-align: center;
-            color: red;
             padding: 20px;
             flex-shrink: 0;
             margin: 10px;
-            border: 2px solid red;
+            border: 2px solid white;
         }
 
         .content {
-            color: red;
             flex-grow: 1;
             padding: 20px;
             margin: 10px;
-            border: 2px solid red;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .right-content {
+            flex-grow: 1;
+            max-width: 45%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        video {
+            max-width: 100%;
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>Header</h1>
+    <h1>Заголовок</h1>
 </header>
 <div class="content">
-    <h3>Content</h3>
-    <img src="завантаження.jpg" alt="Christopher Adam Bumstead"/>
-    <a href="https://www.google.com.ua/?hl=uk">Google</a>
-    <ol>
-        <li>Елемент 1</li>
-        <li>Елемент 2</li>
-        <li>Елемент 3</li>
-    </ol>
-    <p style="font-size: 20px;">Це текст з різним регістром: <em style="font-size: 16px;">Test Test</em></p>
-    <video width="320" height="240" controls>
-        <source src="video_2023-09-15_01-40-49.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <form>
-        <label for="firstName">Ім'я:</label>
-        <input type="text" id="firstName" name="firstName"><br><br>
-        <label for="lastName">Прізвище:</label>
-        <input type="text" id="lastName" name="lastName"><br><br>
-        <input type="submit" value="Надіслати">
-    </form>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.309147225888!2d30.45328021570658!3d50.449452179475286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf48a4565c27%3A0x3112d2d3a5f21d77!2z0JrQvtCy0L7RgNC90YHRjNC60LA!5e0!3m2!1sen!2sua!4v1630672755766!5m2!1sen!2sua" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe><br>
+    <h3>Контент</h3>
+    <div class="left-content">
+        <img src="smurf cat.jpg" alt="Smurf cat"/>
+        <ol>
+            <li>Eat</li>
+            <li>Sleep</li>
+            <li>Play</li>
+            <li>Repeat</li>
+        </ol>
+        <p style="font-size: 20px;">Занадто <em style="font-size: 16px;">багато</em> <em style="font-size: 30px;">котів</em></p>
+    </div>
+    <div class="right-content">
+        <video width="320" height="240" controls>
+            <source src="Cats (speed up).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="https://www.google.com.ua/?hl=uk">Google</a>
+        <form>
+            <label for="firstName">Ім'я:</label>
+            <input type="text" id="firstName" name="firstName"><br><br>
+            <label for="lastName">Прізвище:</label>
+            <input type="text" id="lastName" name="lastName"><br><br>
+            <input type="submit" value="Надіслати">
+        </form>
+    </div>
+    <div class="bottom-content">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.093587994212!2d30.40099915244574!3d50.45798191381211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf1371e58211%3A0x680f95250222acef!2sCatHouse!5e0!3m2!1suk!2sua!4v1694766522930!5m2!1suk!2sua"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 </div>
 <footer>
-    <h2>Footer</h2>
+    <h2>Футер</h2>
 </footer>
 </body>
 </html>
